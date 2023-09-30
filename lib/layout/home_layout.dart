@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app/core/Application_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/moduls/hadeth_tab/hadeth_view.dart';
 import 'package:islami_app/moduls/quran_tab/quran_view.dart';
 import 'package:islami_app/moduls/radio_tab/radio_view.dart';
 import 'package:islami_app/moduls/sebha_tab/sebha_view.dart';
 import 'package:provider/provider.dart';
+
 import '../core/provider/app_provider.dart';
 import '../moduls/setting_tab/setting_view.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeLayout extends StatefulWidget {
   static String routeName = "home_layout";
@@ -30,6 +30,7 @@ class _HomeLayoutState extends State<HomeLayout> {
 
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context);
     var appProvider = Provider.of<AppProvider>(context);
 
     var local = AppLocalizations.of(context)!;
@@ -41,7 +42,10 @@ class _HomeLayoutState extends State<HomeLayout> {
       )),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar: AppBar(title: Text(AppLocalizations.of(context)!.islamic)),
+        appBar: AppBar(
+            title: Text(AppLocalizations.of(context)!.islamic,
+                style: theme.textTheme.titleLarge!
+                    .copyWith(color: theme.colorScheme.onSecondary))),
         bottomNavigationBar: BottomNavigationBar(
             onTap: (int index) {
               setState(() {

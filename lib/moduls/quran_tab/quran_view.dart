@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/moduls/quran_tab/quran_details_view.dart';
 import 'package:islami_app/moduls/quran_tab/widget.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuranView extends StatelessWidget {
   QuranView({super.key});
@@ -140,7 +139,7 @@ class QuranView extends StatelessWidget {
         children: [
           Expanded(
               child: Text(
-            "رقم السورة",
+                "اسم السورة",
             style: theme.textTheme.bodyMedium!
                 .copyWith(color: theme.colorScheme.onSecondary),
             textAlign: TextAlign.center,
@@ -151,7 +150,7 @@ class QuranView extends StatelessWidget {
             color: theme.colorScheme.onPrimary,
           ),
           Expanded(
-              child: Text("اسم السورة",
+              child: Text("رقم السورة",
                   style: theme.textTheme.bodyMedium!
                       .copyWith(color: theme.colorScheme.onSecondary),
                   textAlign: TextAlign.center)),

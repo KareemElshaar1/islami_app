@@ -12,6 +12,9 @@ class ApplicationTheme {
           onPrimary: const Color(0xFFB7935F),
           onSecondary: Colors.black,
           secondary: Colors.black,
+          surface: Colors.white,
+          background: const Color(0xFFB7935F),
+          onPrimaryContainer: const Color(0xFFB7935F),
           onBackground: Colors.white.withOpacity(0.8)),
       appBarTheme: AppBarTheme(
           iconTheme: IconThemeData(
@@ -53,10 +56,13 @@ class ApplicationTheme {
       colorScheme: ColorScheme.fromSeed(
         seedColor: const Color(0xFF141A2E),
         primary: const Color(0xFF141A2E),
+        surface: Colors.black,
         onPrimary: const Color(0xFFB7935F),
         onSecondary: Colors.white,
         secondary: Color(0xFFFACC1D),
         onBackground: Color(0xFF141A2E).withOpacity(0.8),
+        background: Color(0xFFFACC1D),
+        onPrimaryContainer: Color(0xFFFACC1D),
       ),
       appBarTheme: AppBarTheme(
           iconTheme: IconThemeData(color: Colors.white),

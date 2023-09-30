@@ -15,7 +15,7 @@ class QuranItem extends StatelessWidget {
       children: [
         Expanded(
             child: Text(
-          suranumber,
+          suraname,
           style: theme.textTheme.bodyMedium!
               .copyWith(color: theme.colorScheme.onSecondary),
           textAlign: TextAlign.center,
@@ -26,7 +26,7 @@ class QuranItem extends StatelessWidget {
           color: theme.colorScheme.onPrimary,
         ),
         Expanded(
-            child: Text(suraname,
+            child: Text(suranumber,
                 style: theme.textTheme.bodyMedium!
                     .copyWith(color: theme.colorScheme.onSecondary),
                 textAlign: TextAlign.center)),
