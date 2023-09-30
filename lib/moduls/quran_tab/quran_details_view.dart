@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islami_app/core/Application_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/moduls/quran_tab/quran_view.dart';
 import 'package:provider/provider.dart';
 
@@ -25,6 +25,7 @@ class _QuranDetailsState extends State<QuranDetails> {
 
     var mediaquery = MediaQuery.of(context).size;
     var theme = Theme.of(context);
+    var local = AppLocalizations.of(context)!;
     return Container(
         decoration: BoxDecoration(
             image: DecorationImage(
@@ -33,9 +34,9 @@ class _QuranDetailsState extends State<QuranDetails> {
         )),
         child: Scaffold(
             appBar: AppBar(
-                title: const Text(
-              "اسلامي",
-            )),
+                title: Text(AppLocalizations.of(context)!.islamic,
+                    style: theme.textTheme.titleLarge!
+                        .copyWith(color: theme.colorScheme.onSecondary))),
             body: Container(
               padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
               margin: const EdgeInsets.only(
