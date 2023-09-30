@@ -29,4 +29,16 @@ class AppProvider extends ChangeNotifier {
         ? "assets/images/splash_dark.png"
         : "assets/images/splash.png";
   }
+
+  String sebhabody() {
+    return isDark()
+        ? "assets/images/dark_body.png"
+        : "assets/images/body_of_seb7a.png";
+  }
+
+  String sebhahead() {
+    return isDark()
+        ? "assets/images/dark_head_of_seb7a.png"
+        : "assets/images/head_of_seb7a.png";
+  }
 }
